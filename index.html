@@ -4,8 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="bg-[white] ">
+    <header class="bg-[#5fc4ff] max-w-7xl m-auto p-10">
+        <h1 class="text-[#212121] text-5xl	font-bold">Interactive</h1>
+        <h3 class="text-3xl	font-bold">Geometry Genius</h3>
+    </header>
+    <main class="flex max-w-7xl m-auto pb-20">
+        <div class="geometryCards grid grid-cols-3 gap-14 items-center m-auto mt-10">
+            <div class="Triangle ">
+                <div class="card w-96 bg-white shadow-xl border">
+                    <figure class="px-10 pt-10">
+                      <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center ">
+                        <h1 class="card-title text-gray-950">Triangle</h1>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <div class="inputArea flex items-center gap-2 mb-3">
+                            <input type="text" id="baseOfTriangle" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	" placeholder="b" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                            <input type="text" id="hightOfTriangle" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	ml-3" placeholder="h" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                        </div>
+                        <div class="outputArea flex items-center gap-3 mb-3">
+                            <h3 class="text-xl text-right text-[#2e2e2e]">Area : </h3>  
+                            <p id="areaOfTriangle">0</p>
+                            <p>cm <sup>2</sup> </p>
+                        </div>
+                        <div class="card-actions">
+                            <button id="triangleBtn" class="btn btn-primary px-20 text-[white] text-xl">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Rectangle">
+                <div class="card w-96 bg-white shadow-xl border">
+                    <figure class="px-10 pt-10">
+                      <img src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center ">
+                        <h1 class="card-title text-gray-950">Rectangle</h1>
+                        <p>Area (A) = w X l</p>
+                        <div class="inputArea flex items-center gap-2 mb-3">
+                            <input id="widthofRectangle" type="text" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	" placeholder="w" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                            <input id="lengthofRectangle" type="text" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	ml-3" placeholder="l" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                        </div>
+                        <div class="outputArea flex items-center gap-3 mb-3">
+                            <h3 class="text-xl text-right text-[#2e2e2e]">Area : </h3>  
+                            <p id="areaOfRectangle" >0</p>
+                            <p>cm <sup>2</sup> </p>
+                        </div>
+                        <div class="card-actions">
+                            <button id="rectanglebtn" class="btn btn-primary px-20 text-[white] text-xl">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Parallelogram">
+                <div class="card w-96 bg-white shadow-xl border">
+                    <figure class="px-10 pt-10">
+                      <img src="images/parallelogram.png" alt="Shoes" class="rounded-xl " style="margin: 12px;" />
+                    </figure>
+                    <div class="card-body items-center ">
+                        <h1 class="card-title text-gray-950">Parallelogram</h1>
+                        <p>Area (A) = b X h</p>
+                        <div class="inputArea flex items-center gap-2 mb-3">
+                            <input id="baseofParallelogram" type="text" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	" placeholder="b" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                            <input id="hightofParallelogram" type="text" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	ml-3" placeholder="h" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                        </div>
+                        <div class="outputArea flex items-center gap-3 mb-3">
+                            <h3 class="text-xl text-right text-[#2e2e2e]">Area : </h3>  
+                            <p id="areaofParallelogram" >0</p>
+                            <p>cm <sup>2</sup> </p>
+                        </div>
+                        <div class="card-actions">
+                            <button id="parallelogramBtn" class="btn btn-primary px-20 text-[white] text-xl">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Rhombus">
+                <div class="card w-96 bg-white shadow-xl border">
+                    <figure class="px-10 pt-10">
+                      <img src="images/rhombus.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center ">
+                        <h1 class="card-title text-gray-950">Rhombus</h1>
+                        <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+                        <div class="inputArea flex items-center gap-2 mb-3">
+                            <input id="distanceOfrhombus1" type="text" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	" placeholder="d1" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                            <input id="distanceOfrhombus2" type="text" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	ml-3" placeholder="d2" >
+                            <p  class="text-[#6c6a6a] text-xl"> cm</p>
+                        </div>
+                        <div class="outputArea flex items-center gap-3 mb-3">
+                            <h3 class="text-xl text-right text-[#2e2e2e]">Area : </h3>  
+                            <p id="areaOFRhombus" >0</p>
+                            <p>cm <sup>2</sup> </p>
+                        </div>
+                        <div class="card-actions">
+                            <button id="rhombusBtn" class="btn btn-primary px-20 text-[white] text-xl">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card5">
+                <div class="card w-96 bg-white shadow-xl border">
+                    <figure class="px-10 pt-10">
+                      <img src="images/pentagon.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center ">
+                        <h1 class="card-title text-gray-950">Pentagon</h1>
+                        <p>Area (A) = 0.5 X p X b</p>
+                        <div class="inputArea flex items-center gap-2 mb-3">
+                            <input type="text" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	" placeholder="p" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                            <input type="text" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	ml-3" placeholder="b" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                        </div>
+                        <div class="outputArea flex items-center gap-3 mb-3">
+                            <h3 class="text-xl text-right text-[#2e2e2e]">Area : </h3>  
+                            <p>0</p>
+                            <p>cm <sup>2</sup> </p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary px-20 text-[white] text-xl">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card6">
+                <div class="card w-96 bg-white shadow-xl border">
+                    <figure class="px-10 pt-10">
+                      <img src="images/ellipse.png" alt="Shoes" class="rounded-xl " style="margin: 12px;" />
+                    </figure>
+                    <div class="card-body items-center ">
+                        <h1 class="card-title text-gray-950">Ellipse</h1>
+                        <p>Area (A) = π X a X b</p>
+                        <div class="inputArea flex items-center gap-2 mb-3">
+                            <input type="text" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	" placeholder="a" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                            <input type="text" class="bg-white text-[black] w-16 px-3 py-1 border rounded-md	ml-3" placeholder="b" >
+                            <p class="text-[#6c6a6a] text-xl"> cm</p>
+                        </div>
+                        <div class="outputArea flex items-center gap-3 mb-3">
+                            <h3 class="text-xl text-right text-[#2e2e2e]">Area : </h3>  
+                            <p>0</p>
+                            <p>cm <sup>2</sup> </p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary px-20 text-[white] text-xl">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script>
+
+
+    </script>
+    <script src="js/trianglale.js"></script>
+    <script src="js/rectangle.js"></script>
+    <script src="js/parallelogram.js"></script>
+    <script src="js/rhombus.js"></script>
+    <script src="js/pentagon.js"></script>
+
 </body>
 </html>
